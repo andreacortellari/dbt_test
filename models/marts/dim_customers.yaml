@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: This table contains the main details of our fictional customers and metrics describing their purchasing history
+
+    columns:
+      - name: customer_id
+        description: This is a unique identifier for the customer
+        data_tests:
+          - not_null
+
+      - name: first_name
+        quote: true
+        description: This is the first_name of the customer
+
+      - name: last_name
+        quote: true
+        description: This is the last_name of the customer
+
+      - name: first_order_date
+        quote: true
+        description: This is the date of a customer's first order
+
+      - name: most_recent_order_date
+        quote: true
+        description: This is the most recent date of a customer's order
+
+      - name: number_of_orders
+        quote: true
+        description: Ths is the total number of orders put in by a customer

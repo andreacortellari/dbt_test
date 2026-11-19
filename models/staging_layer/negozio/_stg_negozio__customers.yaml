@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: _stg_negozio__customers
+    description: This table contains the main details of our fictional customers and metrics describing their purchasing history
+
+    columns:
+      - name: customer_id
+        description: "{{ column_description('customer_id') }}" 
+        data_tests:
+          - not_null
+
+      - name: first_name
+        quote: true
+        description: "{{ column_description('first_name') }}"
+
+      - name: last_name
+        quote: true
+        description: "{{ column_description('last_name') }}"

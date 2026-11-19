@@ -6,17 +6,17 @@ models:
 
     columns:
       - name: customer_id
-        description: This is a unique identifier for the customer
+        description: "{{ column_description('customer_id') }}"
         data_tests:
           - not_null
 
       - name: first_name
         quote: true
-        description: This is the first_name of the customer
+        description: "{{ column_description('first_name') }}"
 
       - name: last_name
         quote: true
-        description: This is the last_name of the customer
+        description: "{{ column_description('last_name') }}"
 
       - name: first_order_date
         quote: true

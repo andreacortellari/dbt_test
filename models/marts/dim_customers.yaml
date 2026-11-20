@@ -9,6 +9,7 @@ models:
         description: "{{ doc('customer_id') }}"
         data_tests:
           - not_null
+          - unique
 
       - name: first_name
         quote: true
@@ -29,3 +30,9 @@ models:
       - name: number_of_orders
         quote: true
         description: Ths is the total number of orders put in by a customer
+        data_tests:
+          - not_null
+
+      - name: lifetime_value
+        quote: true
+        description: Ths is the lifetime value of a customer, defined as the total of all their succesfull payments, expressed in dollars

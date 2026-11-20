@@ -3,8 +3,8 @@ SELECT
     orderid AS order_id,
     paymentmethod AS payment_method,
     status AS payment_status,
-    payment_amount,
-    payment_created,
+    amount AS payment_amount,
+    created AS payment_created,
     _batched_at
-FROM `dbt-tutorial`.stripe.payment
+FROM {{ source('stripe', 'payment') }}
 ORDER BY order_id

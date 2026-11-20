@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: This table contains the main details of our fictional customers and insights about their purchasing history
+
+    columns:
+      - name: order_id
+        description: "{{ doc('order_id') }}"
+        data_tests:
+          - not_null
+
+      - name: customer_id
+        description: "{{ doc('customer_id') }}"
+        data_tests:
+          - not_null
+    
+      - name: payment_amount
+        description: The payment amount, in dollars

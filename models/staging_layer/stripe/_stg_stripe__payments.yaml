@@ -21,11 +21,11 @@ models:
         quote: true
         description: Whether the payment succeded
       
-      - name: amount
+      - name: payment_amount
         quote: true
         description: The payment's amount
       
-      - name: created
+      - name: payment_created
         quote: true
         description: When the transaction was created
       

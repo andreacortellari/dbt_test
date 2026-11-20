@@ -2,7 +2,13 @@ with
 
     customers as (select * from {{ ref("_stg_negozio__customers") }}),
 
-    orders as (select * from {{ ref("_stg_negozio__orders") }}),
+    fct_orders as (
+        select 
+            customer_id, 
+            SUM(amount / 100) AS lifetime_value 
+        FROM {{ ref('fct_orders') }} 
+        GROUP BY 1
+    ),
 
     customer_orders as (
 
@@ -27,12 +33,12 @@ with
             customers.last_name,
             customer_orders.first_order_date,
             customer_orders.most_recent_order_date,
-            coalesce(customer_orders.number_of_orders, 0) as number_of_orders
+            coalesce(customer_orders.number_of_orders, 0) as number_of_orders,
+            fct_orders.lifetime_value
 
         from customers
-
         left join customer_orders using (customer_id)
-
+        left join fct_orders using (customer_id)
     )
 
 select *

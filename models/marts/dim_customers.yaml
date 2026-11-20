@@ -2,21 +2,21 @@ version: 2
 
 models:
   - name: dim_customers
-    description: This table contains the main details of our fictional customers and metrics describing their purchasing history
+    description: This table contains the main details of our fictional customers and insights about their purchasing history
 
     columns:
       - name: customer_id
-        description: "{{ column_description('customer_id') }}"
+        description: "{{ doc('customer_id') }}"
         data_tests:
           - not_null
 
       - name: first_name
         quote: true
-        description: "{{ column_description('first_name') }}"
+        description: "{{ doc('first_name') }}"
 
       - name: last_name
         quote: true
-        description: "{{ column_description('last_name') }}"
+        description: "{{ doc('last_name') }}"
 
       - name: first_order_date
         quote: true

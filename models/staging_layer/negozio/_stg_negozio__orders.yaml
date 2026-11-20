@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: _stg_negozio__orders
+    description: This table contains the main details of the orders placed with the shop
+
+    columns:
+      - name: order_id
+        quote: true
+        description: This is the unique identifier of an order
+
+      - name: customer_id
+        description: "{{ doc('customer_id') }}"
+        data_tests:
+          - not_null
+
+      - name: order_date
+        quote: true
+        description: This is the data when an order was placed
+
+      - name: status
+        quote: true
+        description: This is the status of an order

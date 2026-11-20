@@ -23,7 +23,7 @@ models:
       
       - name: payment_amount
         quote: true
-        description: The payment's amount
+        description: The payment's amount, in cents
       
       - name: payment_created
         quote: true

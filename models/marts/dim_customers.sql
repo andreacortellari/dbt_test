@@ -5,7 +5,7 @@ with
     fct_orders as (
         select 
             customer_id, 
-            SUM(amount / 100) AS lifetime_value 
+            SUM(payment_amount / 100) AS lifetime_value 
         FROM {{ ref('fct_orders') }} 
         GROUP BY 1
     ),
@@ -19,7 +19,7 @@ with
             max(order_date) as most_recent_order_date,
             count(order_id) as number_of_orders
 
-        from orders
+        from {{ ref('_stg_negozio__orders') }}
 
         group by 1
 

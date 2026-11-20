@@ -35,4 +35,4 @@ models:
 
       - name: lifetime_value
         quote: true
-        description: Ths is the lifetime value of a customer, defined as the total of all their succesfull payments, expressed in dollars
+        description: This is the lifetime value of a customer, defined as the total of all their succesfull payments, expressed in dollars

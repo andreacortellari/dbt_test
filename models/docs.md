@@ -13,3 +13,7 @@ This is the last name of a person
 {% docs order_id %}
 This is the unique identifier of an order
 {% enddocs %}
+
+{% docs payment_amount %}
+The payment amount, in dollars
+{% enddocs %}

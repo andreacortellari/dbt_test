@@ -23,7 +23,7 @@ models:
       
       - name: payment_amount
         quote: true
-        description: The payment's amount, in cents
+        description: "{{ doc('payment_amount') }}"
       
       - name: payment_created
         quote: true

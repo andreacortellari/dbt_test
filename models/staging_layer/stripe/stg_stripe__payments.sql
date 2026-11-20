@@ -6,5 +6,5 @@ SELECT
     amount AS payment_amount,
     created AS payment_created,
     _batched_at
-FROM `dbt-tutorial`.stripe.payment
+FROM {{ source('stripe', 'payment') }}
 ORDER BY order_id

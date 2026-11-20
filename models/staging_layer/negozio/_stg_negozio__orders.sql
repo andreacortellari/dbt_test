@@ -3,5 +3,5 @@ select
     user_id as customer_id,
     order_date,
     status
-FROM `dbt-tutorial`.jaffle_shop.orders
+FROM {{ source('negozio', 'orders') }}
 ORDER BY order_id

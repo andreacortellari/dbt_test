@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: _stg_stripe__payments
+    description: This table contains Stripe payments details
+
+    columns:
+      - name: payment_id
+        quote: true
+        description: The unique identifier for a Stripe payment
+
+      - name: order_id
+        quote: true
+        description: "{{ doc('order_id') }}"
+      
+      - name: payment_method
+        quote: true
+        description: How the payment was made
+      
+      - name: payment_status
+        quote: true
+        description: Whether the payment succeded
+      
+      - name: payment_amount
+        quote: true
+        description: The payment's amount
+      
+      - name: payment_created
+        quote: true
+        description: When the transaction was created
+      
+      - name: batched_at
+        quote: true
+        description: When the transaction was batched

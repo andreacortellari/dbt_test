@@ -8,6 +8,10 @@ models:
       - name: order_id
         quote: true
         description: "{{ doc('order_id') }}"
+        data_tests: 
+          - unique
+          - not_null
+          
 
       - name: customer_id
         description: "{{ doc('customer_id') }}"

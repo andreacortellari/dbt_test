@@ -8,10 +8,15 @@ models:
       - name: payment_id
         quote: true
         description: The unique identifier for a Stripe payment
+        data-test: 
+          - unique
+          - not_null
 
       - name: order_id
         quote: true
         description: "{{ doc('order_id') }}"
+        data-test:
+          - not_null
       
       - name: payment_method
         quote: true
@@ -20,10 +25,14 @@ models:
       - name: payment_status
         quote: true
         description: Whether the payment succeded
-      
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['failed', 'success']
+        
       - name: payment_amount
         quote: true
-        description: The payment's amount, in cents
+        description: "{{ doc('payment_amount') }}"
       
       - name: payment_created
         quote: true

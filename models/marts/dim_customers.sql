@@ -5,7 +5,7 @@ with
     fct_orders as (
         select 
             customer_id, 
-            SUM(payment_amount / 100) AS lifetime_value 
+            SUM(payment_amount) AS lifetime_value 
         FROM {{ ref('fct_orders') }} 
         GROUP BY 1
     ),

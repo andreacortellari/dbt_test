@@ -3,7 +3,7 @@ payments AS (
     SELECT 
         order_id, 
         SUM(payment_amount) AS payment_amount 
-    FROM {{ ref('stg_stripe__payments') }}
+    FROM {{ ref('_stg_stripe__payments') }}
     WHERE payment_status = 'success'
     GROUP BY 1
 )

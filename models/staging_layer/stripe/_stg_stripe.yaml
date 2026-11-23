@@ -32,14 +32,16 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: ["failed", "success"]
+                values: ["fail", "success"]
+      
       - name: payment_amount
         quote: true
         description: "{{ doc('payment_amount') }}"
+      
       - name: payment_created
         quote: true
         description: When the transaction was created
 
-      - name: batched_at
+      - name: _batched_at
         quote: true
         description: When the transaction was batched

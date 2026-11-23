@@ -1,6 +1,24 @@
 version: 2
 
 models:
+  - name: _stg_negozio__customers
+    description: This table contains the main details of our fictional customers
+
+    columns:
+      - name: customer_id
+        description: "{{ doc('customer_id') }}"
+        tests:
+          - not_null
+          - unique
+
+      - name: first_name
+        quote: true
+        description: "{{ doc('first_name') }}"
+
+      - name: last_name
+        quote: true
+        description: "{{ doc('last_name') }}"
+
   - name: _stg_negozio__orders
     description: This table contains the main details of the orders placed with the shop
 
@@ -8,14 +26,13 @@ models:
       - name: order_id
         quote: true
         description: "{{ doc('order_id') }}"
-        data_tests: 
+        tests:
           - unique
           - not_null
-          
 
       - name: customer_id
         description: "{{ doc('customer_id') }}"
-        data_tests:
+        tests:
           - not_null
 
       - name: order_date

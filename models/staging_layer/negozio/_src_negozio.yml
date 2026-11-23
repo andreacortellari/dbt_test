@@ -15,7 +15,7 @@ sources:
       - name: customers
         columns:
         - name: id
-          data_tests:
+          tests:
             - not_null
       
         config:
@@ -23,6 +23,6 @@ sources:
       - name: orders
         columns:
           - name: id
-            data_tests:
+            tests:
               - not_null
               - unique

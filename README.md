@@ -4,11 +4,11 @@ This is where I store all the code generated while learning how to use DBT. Most
 
 You can check what it is exactly that I do on https://andreacortellari.github.io/.
 
-## Mt Toolkit
+## 🔧 My Toolkit
 For this project, I have used:
-- *DBT Studio*, where the magic happens.
-- *GitHub*, where my code is stored. Commits are code-versioned and merged with clear Pull Requests. (And yes, it is a solo project, so I PRed and merged my own code. YOLO) 
-- *BigQuery*, where my dataset lives.
+- DBT Studio, to make the magic happen.
+- GitHub, to store my code. Commits are code-versioned and merged with clear Pull Requests. (And yes, it is a solo project, so I PRed and merged my own code. YOLO) 
+- BigQuery, to house my dataset.
 
 ## Structure
 
